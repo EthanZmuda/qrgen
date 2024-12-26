@@ -1,0 +1,44 @@
+{
+  "name": "qrgen",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "rm -rf ./dist; tsc",
+    "test": "jest",
+    "lint": "gts lint ./src",
+    "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "fix": "gts fix",
+    "deploy-local": "rm -rf ./node_modules/qrgen/*; cp -r ./dist/* ./node_modules/qrgen/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EthanZmuda/qrgen.git"
+  },
+  "author": "Ethan Zmuda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EthanZmuda/qrgen/issues"
+  },
+  "homepage": "https://github.com/EthanZmuda/qrgen#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.7.5",
+    "eslint": "^8.57.1",
+    "globals": "^15.13.0",
+    "gts": "^6.0.2",
+    "jest": "^29.7.0",
+    "prettier": "^3.4.2",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.17.0"
+  },
+  "dependencies": {
+    "jimp": "^1.6.0"
+  }
+}
